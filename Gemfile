@@ -19,6 +19,7 @@ end
 
 gem 'devise', '~>2.1.3'
 gem 'mysql2'
+gem 'sqlite3'
 
 gem 'babosa'
 gem 'rails_autolink'
