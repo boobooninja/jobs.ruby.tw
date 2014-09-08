@@ -22,7 +22,8 @@ feature 'User edit', :devise do
     fill_in 'Email', :with => 'newemail@example.com'
     fill_in 'Current password', :with => user.password
     click_button 'Update'
-    expect(page).to have_content I18n.t 'devise.registrations.updated'
+    # expect(page).to have_content I18n.t 'devise.registrations.updated'
+    expect(page).to have_content I18n.t 'devise.registrations.update_needs_confirmation'
   end
 
   # Scenario: User cannot edit another user's profile
