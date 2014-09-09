@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'thin'
 gem 'babosa'
 
+gem 'seo_helper'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
