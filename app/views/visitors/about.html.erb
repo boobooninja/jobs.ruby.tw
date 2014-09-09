@@ -1,0 +1,5 @@
+<% if I18n.locale == :zh_tw %>
+  <%= render :partial => "about_zh" %>
+<% else  %>
+  <%= render :partial => "about_en" %>
+<% end %>

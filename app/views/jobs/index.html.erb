@@ -1,45 +1,28 @@
-<h1>Listing jobs</h1>
+<p class="post-job clearfix">
+  <%= link_to t("post_a_new_job"),
+      new_job_path,
+      title: t("post_a_new_job") %>
+</p>
 
-<table>
+<table cellspacing="0" class="joblist">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Job type</th>
-      <th>Occupation</th>
-      <th>Company name</th>
-      <th>Location</th>
-      <th>Url</th>
-      <th>Description</th>
-      <th>Apply information</th>
-      <th>Deadline</th>
-      <th>User</th>
-      <th>Aasm state</th>
-      <th colspan="3"></th>
+      <th><%= t("job.posted") %></th>
+      <th><%= t("job.title") %></th>
+      <th><%= t("job.company_name") %></th>
+      <th><%= t("job.location") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= job.title %></td>
-        <td><%= job.job_type %></td>
-        <td><%= job.occupation %></td>
+        <td><%= job.created_at.to_date %></td>
+        <td><%= link_to job.title, job_path(job) %></td>
         <td><%= job.company_name %></td>
         <td><%= job.location %></td>
-        <td><%= job.url %></td>
-        <td><%= job.description %></td>
-        <td><%= job.apply_information %></td>
-        <td><%= job.deadline %></td>
-        <td><%= job.user_id %></td>
-        <td><%= job.aasm_state %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Job', new_job_path %>
+<span class="paperclip"></span>

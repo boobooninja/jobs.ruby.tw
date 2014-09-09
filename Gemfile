@@ -17,6 +17,7 @@ gem 'thin'
 gem 'babosa'
 
 gem 'seo_helper'
+gem 'google_plus_helper'
 
 group :development do
   gem 'better_errors'

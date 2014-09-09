@@ -10,7 +10,10 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: 'visitors#index'
+  root to: 'jobs#index'
+
+  get 'about', to: 'pages#about'
+
   devise_for :users
   resources :users
 end
