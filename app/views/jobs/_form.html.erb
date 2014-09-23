@@ -78,17 +78,19 @@
   if ( $("#job_deadline_forever").attr("checked") ) {
       $("#deadline_fields").hide();
   }
+
   $("#job_deadline_forever").click(function() {
       $("#deadline_fields").toggle();
   });
-    $("a.preview").colorbox( {
-        width: "960px",
-        height: "80%",
-        inline: true,
-        onLoad: function() {
-          $.post("/jobs/preview", $("form").serialize(), function(s){ $("#preview").html(s)});
-        }
-    } );
+
+  $("a.preview").colorbox( {
+      width: "960px",
+      height: "80%",
+      inline: true,
+      onLoad: function() {
+        $.post("/jobs/preview", $("form").serialize(), function(s){ $("#preview").html(s)});
+      }
+  } );
 </script>
 
 <% end %>

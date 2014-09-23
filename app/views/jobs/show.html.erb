@@ -8,11 +8,11 @@
   <span class="manage">
   <%= link_to t(:edit), edit_job_path(@job), :class => "edit" %>
   <% if @job.closed? %>
-    <%= link_to t(:open), open_job_path(@job), :confirm => t(:are_you_sure), :method => :put, :class => "open" %>
+    <%= link_to t(:open), open_job_path(@job), data: {confirm: t(:are_you_sure)}, :method => :put, :class => "open" %>
   <% else %>
-    <%= link_to t(:close), close_job_path(@job), :confirm => t(:are_you_sure), :method => :put, :class => "close" %>
+    <%= link_to t(:close), close_job_path(@job), data: {confirm: t(:are_you_sure)}, :method => :put, :class => "close" %>
   <% end %>
-  <%= link_to t(:delete), job_path(@job), :confirm => t(:are_you_sure), :method => :delete, :class => "delete" %>
+  <%= link_to t(:delete), job_path(@job), data: {confirm: t(:are_you_sure)}, :method => :delete, :class => "delete" %>
   </span>
  <% elsif @job.deadline %>
   <%= t("job.deadline") %>: <%= @job.deadline %>
