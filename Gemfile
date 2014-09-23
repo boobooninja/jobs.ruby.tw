@@ -20,6 +20,9 @@ gem 'seo_helper'
 gem 'google_plus_helper'
 gem 'rails_autolink'
 
+# gem 'jquery-colorbox-rails'
+gem 'colorbox-rails'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

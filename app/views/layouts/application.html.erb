@@ -13,7 +13,7 @@
     <%# javascript_include_tag "application" %>
     <%= render :partial => "common/facebook_js" %>
     <%= google_plusone_javascript_include_tag(:async => true) %>
-    <%# yield :scripts %>
+    <%#= yield :scripts %>
 
     <%= render :partial => "common/google_analytics" %>
 
@@ -63,5 +63,6 @@
         <address>The job board is a free service by <a href="http://ruby.tw">Ruby Taiwan</a> and hosted by <a href="http://www.openfoundry.org" target="_blank">OSSF</a>.</address>
       </div>
     </div>
+    <%= yield :scripts %>
   </body>
 </html>

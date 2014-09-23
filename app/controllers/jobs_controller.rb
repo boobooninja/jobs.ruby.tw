@@ -83,6 +83,7 @@ class JobsController < ApplicationController
     @job.valid?
 
     render layout: false
+    # render :preview
   end
 
   def open
