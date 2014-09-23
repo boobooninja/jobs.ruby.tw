@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   root to: 'jobs#index'
 
-  get 'about', to: 'pages#about'
+  get 'about', to: 'visitors#about'
 
   devise_for :users
   resources :users

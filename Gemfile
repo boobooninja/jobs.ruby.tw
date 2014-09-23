@@ -18,6 +18,7 @@ gem 'babosa'
 
 gem 'seo_helper'
 gem 'google_plus_helper'
+gem 'rails_autolink'
 
 group :development do
   gem 'better_errors'
@@ -30,6 +31,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'pry-rails'
 end
 
 group :test do

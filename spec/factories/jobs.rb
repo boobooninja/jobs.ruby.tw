@@ -10,7 +10,7 @@ FactoryGirl.define do
     url "http://jobs.ruby.tw"
     description "Ruby on Rails Back-end Developer"
     apply_information "Send resume"
-    deadline "2014-09-08"
+    deadline Date.parse('2099-01-01')
     user_id 1
     aasm_state "published"
   end

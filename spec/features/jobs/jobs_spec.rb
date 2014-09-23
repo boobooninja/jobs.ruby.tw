@@ -26,7 +26,8 @@ feature 'View homepage' do
   end
 
   scenario 'User could post new job' do
-    login!
+    # login!
+    signin(@user.email, @user.password)
     visit new_job_path
 
     within('#new_job') do
